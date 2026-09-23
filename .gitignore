@@ -1,11 +1,81 @@
-# Backend
-server/node_modules
+# ==============================================================================
+# ENVIRONMENT VARIABLES & SECRETS (CRITICAL: NEVER COMMIT REAL KEYS/PASSWORDS)
+# ==============================================================================
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
 server/.env
+server/.env.*
+!server/.env.example
+client/.env
+client/.env.*
+!client/.env.example
 
-# Frontend
-client/node_modules
-client/dist
+# Secret keys, credentials & SSL certificates
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+id_rsa
+id_rsa.pub
 
-# OS
+# ==============================================================================
+# DEPENDENCIES
+# ==============================================================================
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# ==============================================================================
+# BUILD OUTPUTS & PRODUCTION BUNDLES
+# ==============================================================================
+client/dist/
+dist/
+dist-ssr/
+build/
+*.local
+
+# ==============================================================================
+# LOGS & DEBUGGING
+# ==============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==============================================================================
+# TESTING & COVERAGE
+# ==============================================================================
+coverage/
+.nyc_output/
+
+# ==============================================================================
+# OPERATING SYSTEM & EDITOR ARTIFACTS
+# ==============================================================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+# IDE & Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
