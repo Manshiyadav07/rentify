@@ -24,6 +24,10 @@ coverage/
 *.cert
 *.crt
 
+# Database backups & snapshots
+backups/
+*.json.bak
+
 # IDE & OS
 .DS_Store
 Thumbs.db

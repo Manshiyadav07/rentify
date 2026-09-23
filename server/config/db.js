@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI);
-    console.log(` MongoDB Connected: ${conn.connection.host}`);
+    const isAtlas = conn.connection.host.includes('mongodb.net');
+    const targetType = isAtlas ? 'MongoDB Atlas Cloud' : 'Local MongoDB';
+    console.log(`📡 [Database] Connected to ${targetType} [Host: ${conn.connection.host}, DB: ${conn.connection.name}]`);
   } catch (error) {
-    console.error(` DB Error: ${error.message}`);
+    console.error(`❌ [Database] Connection Error: ${error.message}`);
     process.exit(1);
   }
 };

@@ -26,6 +26,11 @@ client/.env.*
 id_rsa
 id_rsa.pub
 
+# Database backups & snapshots
+backups/
+server/backups/
+*.json.bak
+
 # ==============================================================================
 # DEPENDENCIES
 # ==============================================================================
