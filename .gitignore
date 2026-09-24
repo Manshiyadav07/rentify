@@ -84,3 +84,8 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Vercel deployment cache
+.vercel/
+# Local database migration scripts
+server/scripts/
