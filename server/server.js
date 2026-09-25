@@ -12,8 +12,10 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.set('trust proxy', 1);
 
 // Security Headers & CORS
+
 app.use(helmet({
   crossOriginResourcePolicy: false // Allow loading public image assets
 }));
